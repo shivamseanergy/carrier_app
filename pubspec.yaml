@@ -80,7 +80,13 @@ flutter:
     - lib/assets/PDF.svg
     - lib/assets/Close.svg
     - lib/assets/Send.svg
-    - lib/assets/Upload.svg 
+    - lib/assets/Upload.svg
+    - lib/assets/Home-Red.svg 
+    - lib/assets/Notification-Red.svg
+    - lib/assets/Settings-Red.svg
+    - lib/assets/Track-Red.svg
+
+ 
 
 
 

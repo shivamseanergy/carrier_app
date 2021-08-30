@@ -173,28 +173,31 @@ class _LoadBoardState extends State<LoadBoard> {
                                             child: Text(
                                               loadBoardList[index].ordrId!,
                                               style: TextStyle(
-                                                  color: Colors.grey[900],
+                                                  color: Color(0xFFA7A7A7),
                                                   fontWeight: FontWeight.w600,
                                                   fontSize: SizeConfig
                                                           .textMultiplier *
-                                                      2),
+                                                      2.2),
                                             ),
                                           ),
-                                          Text(
-                                            "Order Confirmed",
-                                            style: TextStyle(
-                                                color: Colors.grey[900],
-                                                fontWeight: FontWeight.w600,
-                                                fontSize:
-                                                    SizeConfig.textMultiplier *
-                                                        2,
-                                                backgroundColor:
-                                                    Colors.lightGreenAccent),
+                                          Container(
+                                            margin: EdgeInsets.only(left: 5),
+                                            padding: EdgeInsets.all(5),
+                                            decoration: const BoxDecoration(
+                                                color: Color(0xFFC1FFBD),
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(5))),
+                                            child: Text(
+                                              "Order Confirmed",
+                                              style: TextStyle(
+                                                  fontFamily: 'Roboto',
+                                                  fontSize: SizeConfig
+                                                          .textMultiplier *
+                                                      1.5,
+                                                  color: Color(0xFF6BB766)),
+                                            ),
                                           ),
                                         ],
-                                      ),
-                                      const Divider(
-                                        color: Colors.white,
                                       ),
                                       Row(
                                         children: [
@@ -206,7 +209,7 @@ class _LoadBoardState extends State<LoadBoard> {
                                                   color: Colors.grey[900],
                                                   fontSize: SizeConfig
                                                           .textMultiplier *
-                                                      1.8),
+                                                      2),
                                             ),
                                           ),
                                           Text(
@@ -214,8 +217,7 @@ class _LoadBoardState extends State<LoadBoard> {
                                             style: TextStyle(
                                               color: Colors.red,
                                               fontSize:
-                                                  SizeConfig.textMultiplier *
-                                                      1.8,
+                                                  SizeConfig.textMultiplier * 2,
                                             ),
                                           ),
                                           Padding(
@@ -228,7 +230,7 @@ class _LoadBoardState extends State<LoadBoard> {
                                                   color: Colors.grey[900],
                                                   fontSize: SizeConfig
                                                           .textMultiplier *
-                                                      1.8),
+                                                      2),
                                             ),
                                           ),
                                         ],
@@ -241,7 +243,7 @@ class _LoadBoardState extends State<LoadBoard> {
                                               color: Colors.grey[900],
                                               fontSize:
                                                   SizeConfig.textMultiplier *
-                                                      1.8),
+                                                      2),
                                         ),
                                       ),
                                       Padding(
@@ -249,10 +251,10 @@ class _LoadBoardState extends State<LoadBoard> {
                                         child: Text(
                                           loadBoardList[index].office!,
                                           style: TextStyle(
-                                              color: Colors.grey[900],
+                                              color: Color(0xFFA2A2A2),
                                               fontSize:
                                                   SizeConfig.textMultiplier *
-                                                      1.8),
+                                                      2),
                                         ),
                                       ),
                                     ],

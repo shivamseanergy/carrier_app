@@ -29,32 +29,108 @@ class _HomeState extends State<Home> {
           items: [
             BottomNavigationBarItem(
                 backgroundColor: AppTheme.appSecondaryColor,
-                icon: SvgPicture.asset(
-                  'lib/assets/Home.svg',
-                  height: SizeConfig.heightMultiplier * 3,
-                ),
-                label: "Load Boards"),
+                icon: _currentIndex == 0
+                    ? Padding(
+                        padding: const EdgeInsets.all(2),
+                        child: Container(
+                          height: SizeConfig.heightMultiplier * 5,
+                          width: SizeConfig.widthMultiplier * 10,
+                          decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10.0))),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: SvgPicture.asset(
+                              'lib/assets/Home-Red.svg',
+                              height: SizeConfig.heightMultiplier * 2.5,
+                            ),
+                          ),
+                        ),
+                      )
+                    : SvgPicture.asset(
+                        'lib/assets/Home.svg',
+                        height: SizeConfig.heightMultiplier * 2.5,
+                      ),
+                label: "LOAD BOARDS"),
             BottomNavigationBarItem(
                 backgroundColor: AppTheme.appSecondaryColor,
-                icon: SvgPicture.asset(
-                  'lib/assets/Track.svg',
-                  height: SizeConfig.heightMultiplier * 3,
-                ),
-                label: "Track"),
+                icon: _currentIndex == 1
+                    ? Padding(
+                        padding: const EdgeInsets.all(2),
+                        child: Container(
+                          height: SizeConfig.heightMultiplier * 5,
+                          width: SizeConfig.widthMultiplier * 10,
+                          decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10.0))),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: SvgPicture.asset(
+                              'lib/assets/Track-Red.svg',
+                              height: SizeConfig.heightMultiplier * 2.5,
+                            ),
+                          ),
+                        ),
+                      )
+                    : SvgPicture.asset(
+                        'lib/assets/Track.svg',
+                        height: SizeConfig.heightMultiplier * 2.5,
+                      ),
+                label: "TRACK"),
             BottomNavigationBarItem(
                 backgroundColor: AppTheme.appSecondaryColor,
-                icon: SvgPicture.asset(
-                  'lib/assets/Notification.svg',
-                  height: SizeConfig.heightMultiplier * 3,
-                ),
-                label: "Notifications"),
+                icon: _currentIndex == 2
+                    ? Padding(
+                        padding: const EdgeInsets.all(2),
+                        child: Container(
+                          height: SizeConfig.heightMultiplier * 5,
+                          width: SizeConfig.widthMultiplier * 10,
+                          decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10.0))),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: SvgPicture.asset(
+                              'lib/assets/Notification-Red.svg',
+                              height: SizeConfig.heightMultiplier * 2.5,
+                            ),
+                          ),
+                        ),
+                      )
+                    : SvgPicture.asset(
+                        'lib/assets/Notification.svg',
+                        height: SizeConfig.heightMultiplier * 2.5,
+                      ),
+                label: "NOTIFICATION"),
             BottomNavigationBarItem(
                 backgroundColor: AppTheme.appSecondaryColor,
-                icon: SvgPicture.asset(
-                  'lib/assets/Settings.svg',
-                  height: SizeConfig.heightMultiplier * 3,
-                ),
-                label: "Settings")
+                icon: _currentIndex == 3
+                    ? Padding(
+                        padding: const EdgeInsets.all(2),
+                        child: Container(
+                          height: SizeConfig.heightMultiplier * 5,
+                          width: SizeConfig.widthMultiplier * 10,
+                          decoration: const BoxDecoration(
+                              color: Colors.white,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10.0))),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: SvgPicture.asset(
+                              'lib/assets/Settings-Red.svg',
+                              height: SizeConfig.heightMultiplier * 2.5,
+                            ),
+                          ),
+                        ),
+                      )
+                    : SvgPicture.asset(
+                        'lib/assets/Settings.svg',
+                        height: SizeConfig.heightMultiplier * 2.5,
+                      ),
+                label: "SETTINGS")
           ],
           onTap: (index) {
             setState(() {

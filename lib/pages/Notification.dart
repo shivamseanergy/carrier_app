@@ -197,11 +197,6 @@ class _NotificationsState extends State<Notifications> {
                                     ],
                                   ),
                                 ),
-                                SvgPicture.asset(
-                                  loadBoardList[index].EmailIcon!,
-                                ),
-                                SvgPicture.asset(
-                                    loadBoardList[index].phoneIcon!)
                               ],
                             )),
                       ),

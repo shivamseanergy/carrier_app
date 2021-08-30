@@ -202,8 +202,9 @@ class _LoadSummaryState extends State<LoadSummary> {
                                     child: ButtonTheme(
                                       alignedDropdown: true,
                                       child: SizedBox(
+                                        height:
+                                            SizeConfig.heightMultiplier * 10,
                                         child: DropdownButtonFormField<String>(
-                                          focusColor: Colors.grey[300],
                                           decoration: InputDecoration(
                                             fillColor: Color(0xFFF8F8F8),
                                             hintText: 'Pick Up / Loaded',
@@ -217,15 +218,13 @@ class _LoadSummaryState extends State<LoadSummary> {
                                                       SizeConfig
                                                               .widthMultiplier *
                                                           2),
-                                              borderSide: const BorderSide(),
                                             ),
                                             focusedBorder: OutlineInputBorder(
-                                                borderRadius: BorderRadius.all(
-                                                    Radius.circular(SizeConfig
-                                                            .widthMultiplier *
-                                                        2)),
-                                                borderSide: const BorderSide(
-                                                    color: Colors.grey)),
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(SizeConfig
+                                                          .widthMultiplier *
+                                                      2)),
+                                            ),
                                           ),
 
                                           // isExpanded: true,
@@ -263,10 +262,11 @@ class _LoadSummaryState extends State<LoadSummary> {
                             ),
                             Center(
                               child: Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: const EdgeInsets.only(top: 30),
                                 child: DottedBorder(
-                                    color: Colors.black,
-                                    strokeWidth: 1,
+                                    dashPattern: [6, 3],
+                                    color: Color(0xFFD8D8D8),
+                                    strokeWidth: 2,
                                     child: Container(
                                       color: Color(0xFFF8F8F8),
                                       height: SizeConfig.heightMultiplier * 30,
@@ -300,6 +300,37 @@ class _LoadSummaryState extends State<LoadSummary> {
                         ),
                       )),
                 ),
+                Material(
+                  // needed
+                  color: AppTheme.appPrimaryColor,
+                  borderRadius:
+                      BorderRadius.circular(SizeConfig.heightMultiplier * 2.5),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).pushReplacementNamed('/home');
+                    }, // needed
+                    child: Container(
+                      height: SizeConfig.heightMultiplier * 5,
+                      width: SizeConfig.widthMultiplier * 45,
+                      decoration: const BoxDecoration(
+
+                          // gradient: LinearGradient(
+                          //     colors: [Colors.orange[700], Colors.orange[800]],
+                          //     begin: Alignment.centerRight,
+                          //     end: Alignment.centerLeft),
+                          ),
+                      child: Center(
+                        child: Text(
+                          "SAVE",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: SizeConfig.textMultiplier * 1.8,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                )
               ]),
             ])));
   }
