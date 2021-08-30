@@ -1,4 +1,5 @@
-import 'package:carrier_app/Login.dart';
+import 'package:carrier_app/pages/LoadSummary.dart';
+import 'package:carrier_app/pages/Login.dart';
 import 'package:carrier_app/pages/Home.dart';
 import 'package:carrier_app/utils/Styling.dart';
 import 'package:flutter/material.dart';
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
 
                     '/login': (BuildContext context) => Login(),
                     '/home': (BuildContext context) => Home(),
+                    '/loadsummarry': (BuildContext context) => LoadSummary(),
 
                     // approveLeave
                   },

@@ -34,6 +34,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  flutter_statusbarcolor: ^0.2.3
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +48,9 @@ dev_dependencies:
   flutter_lints: ^1.0.0
   keyboard_dismisser: ^2.0.0
   flutter_svg: ^0.22.0
+  flutter_switch: ^0.3.2
+  dotted_border: ^2.0.0+1
+
 
 
 # For information on the generic Dart part of this file, see the
@@ -68,6 +72,19 @@ flutter:
     - lib/assets/Settings.svg
     - lib/assets/Notification.svg
     - lib/assets/Logout.svg
+    - lib/assets/Email.svg
+    - lib/assets/Phone.svg
+    - lib/assets/Search.svg
+    - lib/assets/BackButton.svg
+    - lib/assets/Shipping.svg
+    - lib/assets/PDF.svg
+    - lib/assets/Close.svg
+    - lib/assets/Send.svg
+    - lib/assets/Upload.svg 
+
+
+
+
 
 
 

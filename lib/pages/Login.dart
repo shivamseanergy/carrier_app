@@ -3,7 +3,7 @@
 import 'package:carrier_app/utils/Styling.dart';
 import 'package:flutter/material.dart';
 
-import 'helper/SizeConfig.dart';
+import '../helper/SizeConfig.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -33,13 +33,28 @@ class _LoginState extends State<Login> {
                 height: SizeConfig.imageSizeMultiplier * 35,
                 width: SizeConfig.imageSizeMultiplier * 45,
               ),
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text(
-                  "Login / Sign Up",
-                  style: TextStyle(fontSize: 22),
-                ),
-              ),
+              Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text.rich(
+                    TextSpan(children: [
+                      TextSpan(
+                          text: "Login",
+                          style: TextStyle(
+                              color: AppTheme.blackColor,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 2.5 * SizeConfig.textMultiplier)),
+                      TextSpan(
+                          text: "/ Sign up ",
+                          style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 2 * SizeConfig.textMultiplier)),
+                    ]),
+                  )),
+              // child: Text(
+              //   "Login / Sign Up",
+              //   style: TextStyle(fontSize: 22),
+              // ),
+
               Padding(
                 padding: const EdgeInsets.only(top: 10),
                 child: SizedBox(
@@ -50,11 +65,14 @@ class _LoginState extends State<Login> {
                       // enabledBorder: const UnderlineInputBorder(
                       //   borderSide: BorderSide(color: Colors.grey),
                       // ),
+                      fillColor: AppTheme.textFieldFillColor,
+                      filled: true,
                       hintText: "Email",
                       hintStyle: TextStyle(
                         color: Colors.grey,
                         fontSize: SizeConfig.textMultiplier * 1.5,
                       ),
+
                       prefixIcon: Padding(
                         padding: EdgeInsets.all(SizeConfig.widthMultiplier * 2),
                         child: Icon(
@@ -86,6 +104,7 @@ class _LoginState extends State<Login> {
                       // enabledBorder: const UnderlineInputBorder(
                       //   borderSide: BorderSide(color: Colors.grey),
                       // ),
+                      fillColor: AppTheme.textFieldFillColor, filled: true,
                       hintText: "Password",
                       hintStyle: TextStyle(
                         color: Colors.grey,

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39.318" height="23.556" viewBox="0 0 39.318 23.556">
+  <g id="Shipping" transform="translate(1 1)">
+    <path id="Path_23" data-name="Path 23" d="M42.089,42.209H40.7a.728.728,0,0,1-.7-.752v-6.7A.728.728,0,0,1,40.7,34h9.471a.285.285,0,0,1,.275.3v6.418a1.445,1.445,0,0,1-1.393,1.492H46.965" transform="translate(-13.135 -23.553)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_24" data-name="Path 24" d="M11.492,20h19.4a1.492,1.492,0,0,1,1.492,1.492V32.686H10V21.492A1.492,1.492,0,0,1,11.492,20Z" transform="translate(-5.523 -20)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_5" data-name="Line 5" x2="11" transform="translate(0 3.556)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line id="Line_6" data-name="Line 6" x2="11" transform="translate(1 6.556)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line id="Line_7" data-name="Line 7" x2="12" transform="translate(3 9.556)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <line id="Line_10" data-name="Line 10" x2="1" transform="translate(29 12.556)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <circle id="Ellipse_5" data-name="Ellipse 5" cx="2.5" cy="2.5" r="2.5" transform="translate(29 16.556)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_25" data-name="Path 25" d="M50.434,31.991a.172.172,0,0,1-.169.233h-10A.266.266,0,0,1,40,31.957V27.268A.269.269,0,0,1,40.269,27h7.677a.505.505,0,0,1,.463.3Z" transform="translate(-13.135 -21.776)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+    <circle id="Ellipse_6" data-name="Ellipse 6" cx="2.5" cy="2.5" r="2.5" transform="translate(8 16.556)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_26" data-name="Path 26" d="M12.985,42.97H11.492A1.492,1.492,0,0,1,10,41.477V37H32.387v5.97H18.209" transform="translate(-5.523 -24.314)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+</svg>

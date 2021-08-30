@@ -8,13 +8,18 @@ class AppTheme {
 
   static const Color appPrimaryColor = Color(0xFFDC332D);
   static const Color appSecondaryColor = Color(0xFF252726);
+  static const Color textFieldFillColor = Color(0xFFECECEC);
 
-  static const Color appBackgroundColor = Color(0xFFFFF7EC);
+  static const Color appBackgroundColor = Color(0xFFFAFAFA);
   static const Color topBarBackgroundColor = Color(0xFFFFD974);
   static const Color selectedTabBackgroundColor = Color(0xFFFFC442);
   static const Color unSelectedTabBackgroundColor = Color(0xFFFFFFFC);
   static const Color subTitleTextColor = Color(0xFF9F988F);
-  static const Color textFieldFillColor = Color(0xFFE2E2E2);
+  static const Color blackColor = Color(0xFF000000);
+
+  //setting screen text colors
+  static const Color settingHeadingTextColor = Color(0xFF000000);
+  static const Color settingSubHeadingTextColor = Colors.grey;
 
   static final ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: AppTheme.appPrimaryColor,
