@@ -54,13 +54,15 @@ class _EmailState extends State<Email> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
                           icon: SvgPicture.asset('lib/assets/Close.svg')),
                     ),
                     Text(
                       "EMAIL",
                       style: TextStyle(
-                          fontSize: SizeConfig.textMultiplier * 2.5,
+                          fontSize: SizeConfig.textMultiplier * 2,
                           color: Colors.white),
                     ),
                     Padding(
@@ -72,7 +74,7 @@ class _EmailState extends State<Email> {
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.only(bottom: 8, left: 8, right: 8),
                   child: Card(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
@@ -80,7 +82,7 @@ class _EmailState extends State<Email> {
                     elevation: 5,
                     child: Padding(
                       padding: const EdgeInsets.only(
-                          top: 8, bottom: 50, left: 8, right: 8),
+                          top: 8, bottom: 200, left: 8, right: 8),
                       child: Column(
                         children: [
                           SizedBox(
@@ -88,12 +90,13 @@ class _EmailState extends State<Email> {
                             child: TextFormField(
                               textAlignVertical: TextAlignVertical.center,
                               decoration: const InputDecoration(
-                                alignLabelWithHint: true,
-                                focusedBorder: InputBorder.none,
-                                enabledBorder: InputBorder.none,
-                                contentPadding: EdgeInsets.all(5),
-                                hintText: "To :",
-                              ),
+                                  alignLabelWithHint: true,
+                                  focusedBorder: InputBorder.none,
+                                  enabledBorder: InputBorder.none,
+                                  contentPadding: EdgeInsets.all(5),
+                                  hintText: "To :",
+                                  hintStyle:
+                                      TextStyle(color: Color(0xFFC1C1C1))),
                               style: TextStyle(
                                   fontSize: SizeConfig.textMultiplier * 2),
                             ),
@@ -106,11 +109,12 @@ class _EmailState extends State<Email> {
                             child: TextFormField(
                               textAlignVertical: TextAlignVertical.center,
                               decoration: const InputDecoration(
-                                focusedBorder: InputBorder.none,
-                                enabledBorder: InputBorder.none,
-                                contentPadding: EdgeInsets.all(5),
-                                hintText: "Cc/Bcc :",
-                              ),
+                                  focusedBorder: InputBorder.none,
+                                  enabledBorder: InputBorder.none,
+                                  contentPadding: EdgeInsets.all(5),
+                                  hintText: "Cc/Bcc :",
+                                  hintStyle:
+                                      TextStyle(color: Color(0xFFC1C1C1))),
                               style: TextStyle(
                                   fontSize: SizeConfig.textMultiplier * 2),
                             ),
@@ -123,11 +127,12 @@ class _EmailState extends State<Email> {
                             child: TextFormField(
                               textAlignVertical: TextAlignVertical.center,
                               decoration: const InputDecoration(
-                                focusedBorder: InputBorder.none,
-                                enabledBorder: InputBorder.none,
-                                contentPadding: EdgeInsets.all(5),
-                                hintText: "Subject :",
-                              ),
+                                  focusedBorder: InputBorder.none,
+                                  enabledBorder: InputBorder.none,
+                                  contentPadding: EdgeInsets.all(5),
+                                  hintText: "Subject :",
+                                  hintStyle:
+                                      TextStyle(color: Color(0xFFC1C1C1))),
                               style: TextStyle(
                                   fontSize: SizeConfig.textMultiplier * 2),
                             ),
@@ -175,80 +180,162 @@ class _EmailState extends State<Email> {
                               )
                             ],
                           ),
-                          Divider(),
+                          const Divider(
+                            thickness: 1,
+                          ),
                           Row(
                             children: [
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.end,
-                                children: const [
+                                children: [
                                   Padding(
                                     padding: EdgeInsets.all(2),
-                                    child: Text('Load #: '),
+                                    child: Text(
+                                      'Load #: ',
+                                      style: TextStyle(
+                                          fontSize:
+                                              SizeConfig.textMultiplier * 1.5),
+                                    ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.all(2),
-                                    child: Text('Origin: '),
+                                    child: Text(
+                                      'Origin: ',
+                                      style: TextStyle(
+                                          fontSize:
+                                              SizeConfig.textMultiplier * 1.5),
+                                    ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.all(2),
-                                    child: Text('Destination: '),
+                                    child: Text(
+                                      'Destination: ',
+                                      style: TextStyle(
+                                          fontSize:
+                                              SizeConfig.textMultiplier * 1.5),
+                                    ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.all(2),
-                                    child: Text('Equipment#: '),
+                                    child: Text(
+                                      'Equipment#: ',
+                                      style: TextStyle(
+                                          fontSize:
+                                              SizeConfig.textMultiplier * 1.5),
+                                    ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.all(2),
-                                    child: Text('Office #: '),
+                                    child: Text(
+                                      'Office #: ',
+                                      style: TextStyle(
+                                          fontSize:
+                                              SizeConfig.textMultiplier * 1.5),
+                                    ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.all(2),
-                                    child: Text('Pickup Date: '),
+                                    child: Text(
+                                      'Pickup Date: ',
+                                      style: TextStyle(
+                                          fontSize:
+                                              SizeConfig.textMultiplier * 1.5),
+                                    ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.all(2),
-                                    child: Text('Delivery Date: '),
+                                    child: Text(
+                                      'Delivery Date: ',
+                                      style: TextStyle(
+                                          fontSize:
+                                              SizeConfig.textMultiplier * 1.5),
+                                    ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.all(2),
-                                    child: Text('Status: '),
+                                    child: Text(
+                                      'Status: ',
+                                      style: TextStyle(
+                                          fontSize:
+                                              SizeConfig.textMultiplier * 1.5),
+                                    ),
                                   )
                                 ],
                               ),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                children: const [
+                                children: [
                                   Padding(
                                     padding: EdgeInsets.all(2),
-                                    child: Text('546897512325'),
+                                    child: Text(
+                                      '546897512325',
+                                      style: TextStyle(
+                                          fontSize:
+                                              SizeConfig.textMultiplier * 1.5),
+                                    ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.all(2),
-                                    child: Text('Pearl'),
+                                    child: Text(
+                                      'Pearl',
+                                      style: TextStyle(
+                                          fontSize:
+                                              SizeConfig.textMultiplier * 1.5),
+                                    ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.all(2),
-                                    child: Text('Pearl Manchester'),
+                                    child: Text(
+                                      'Pearl Manchester',
+                                      style: TextStyle(
+                                          fontSize:
+                                              SizeConfig.textMultiplier * 1.5),
+                                    ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.all(2),
-                                    child: Text('9574215'),
+                                    child: Text(
+                                      '9574215',
+                                      style: TextStyle(
+                                          fontSize:
+                                              SizeConfig.textMultiplier * 1.5),
+                                    ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.all(2),
-                                    child: Text('+1 356 25458'),
+                                    child: Text(
+                                      '+1 356 25458',
+                                      style: TextStyle(
+                                          fontSize:
+                                              SizeConfig.textMultiplier * 1.5),
+                                    ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.all(2),
-                                    child: Text('25-July-2021'),
+                                    child: Text(
+                                      '25-July-2021',
+                                      style: TextStyle(
+                                          fontSize:
+                                              SizeConfig.textMultiplier * 1.5),
+                                    ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.all(2),
-                                    child: Text('30-July-2021'),
+                                    child: Text(
+                                      '30-July-2021',
+                                      style: TextStyle(
+                                          fontSize:
+                                              SizeConfig.textMultiplier * 1.5),
+                                    ),
                                   ),
                                   Padding(
                                     padding: EdgeInsets.all(2),
-                                    child: Text('Confirmed'),
+                                    child: Text(
+                                      'Confirmed',
+                                      style: TextStyle(
+                                          fontSize:
+                                              SizeConfig.textMultiplier * 1.5),
+                                    ),
                                   )
                                 ],
                               ),

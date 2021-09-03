@@ -85,11 +85,12 @@ class _LoadBoardState extends State<LoadBoard> {
                   Text(
                     "LOAD BOARD",
                     style: TextStyle(
-                        fontSize: SizeConfig.textMultiplier * 2.5,
+                        fontSize: SizeConfig.textMultiplier * 2,
                         color: Colors.white),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 15, top: 10, bottom: 10),
                     child: SvgPicture.asset('lib/assets/Logout.svg'),
                   )
                 ],
@@ -103,20 +104,25 @@ class _LoadBoardState extends State<LoadBoard> {
                   elevation: 5,
                   child: TextFormField(
                     textAlignVertical: TextAlignVertical.center,
+                    textAlign: TextAlign.left,
                     decoration: InputDecoration(
                         focusedBorder: InputBorder.none,
                         enabledBorder: InputBorder.none,
                         contentPadding: EdgeInsets.all(5),
                         hintText:
                             "Origin, Destination, Equipment, Office Number",
+                        hintStyle: TextStyle(
+                            color: Color(0xFFC1C1C1),
+                            fontSize: SizeConfig.textMultiplier * 1.8),
                         suffixIcon: Container(
-                          margin: EdgeInsets.all(10),
+                          height: SizeConfig.heightMultiplier * 4,
+                          margin: EdgeInsets.all(8),
                           decoration: const BoxDecoration(
                               color: AppTheme.appPrimaryColor,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10.0))),
                           child: Padding(
-                            padding: const EdgeInsets.all(12),
+                            padding: const EdgeInsets.all(8),
                             child: SvgPicture.asset(
                               'lib/assets/Search.svg',
                             ),
@@ -131,7 +137,6 @@ class _LoadBoardState extends State<LoadBoard> {
                 itemCount: loadBoardList.length,
                 itemBuilder: (context, index) {
                   return Card(
-                    elevation: 5.0,
                     margin: const EdgeInsets.symmetric(
                         horizontal: 10.0, vertical: 6.0),
                     child: InkWell(
@@ -140,7 +145,7 @@ class _LoadBoardState extends State<LoadBoard> {
                         alignment: FractionalOffset.centerLeft,
                         child: ListTile(
                             contentPadding: const EdgeInsets.symmetric(
-                                horizontal: 10.0, vertical: 10.0),
+                                horizontal: 5, vertical: 5),
                             // trailing: Icon(
                             //   Icons.arrow_forward_ios,
                             //   size: 14.0,
@@ -157,7 +162,7 @@ class _LoadBoardState extends State<LoadBoard> {
                             //   ),
                             // ),
                             title: Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(3),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -177,7 +182,7 @@ class _LoadBoardState extends State<LoadBoard> {
                                                   fontWeight: FontWeight.w600,
                                                   fontSize: SizeConfig
                                                           .textMultiplier *
-                                                      2.2),
+                                                      2),
                                             ),
                                           ),
                                           Container(
@@ -193,7 +198,7 @@ class _LoadBoardState extends State<LoadBoard> {
                                                   fontFamily: 'Roboto',
                                                   fontSize: SizeConfig
                                                           .textMultiplier *
-                                                      1.5,
+                                                      1.3,
                                                   color: Color(0xFF6BB766)),
                                             ),
                                           ),
@@ -209,7 +214,7 @@ class _LoadBoardState extends State<LoadBoard> {
                                                   color: Colors.grey[900],
                                                   fontSize: SizeConfig
                                                           .textMultiplier *
-                                                      2),
+                                                      1.6),
                                             ),
                                           ),
                                           Text(
@@ -217,7 +222,8 @@ class _LoadBoardState extends State<LoadBoard> {
                                             style: TextStyle(
                                               color: Colors.red,
                                               fontSize:
-                                                  SizeConfig.textMultiplier * 2,
+                                                  SizeConfig.textMultiplier *
+                                                      1.6,
                                             ),
                                           ),
                                           Padding(
@@ -230,7 +236,7 @@ class _LoadBoardState extends State<LoadBoard> {
                                                   color: Colors.grey[900],
                                                   fontSize: SizeConfig
                                                           .textMultiplier *
-                                                      2),
+                                                      1.6),
                                             ),
                                           ),
                                         ],
@@ -243,7 +249,7 @@ class _LoadBoardState extends State<LoadBoard> {
                                               color: Colors.grey[900],
                                               fontSize:
                                                   SizeConfig.textMultiplier *
-                                                      2),
+                                                      1.6),
                                         ),
                                       ),
                                       Padding(
@@ -254,7 +260,7 @@ class _LoadBoardState extends State<LoadBoard> {
                                               color: Color(0xFFA2A2A2),
                                               fontSize:
                                                   SizeConfig.textMultiplier *
-                                                      2),
+                                                      1.6),
                                         ),
                                       ),
                                     ],
@@ -264,6 +270,8 @@ class _LoadBoardState extends State<LoadBoard> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Container(
+                                        height: SizeConfig.heightMultiplier * 5,
+                                        margin: EdgeInsets.only(right: 5),
                                         decoration: const BoxDecoration(
                                             color: AppTheme.blackColor,
                                             shape: BoxShape.circle),
@@ -278,7 +286,7 @@ class _LoadBoardState extends State<LoadBoard> {
                                         ),
                                       ),
                                       Container(
-                                        margin: EdgeInsets.only(left: 10),
+                                        height: SizeConfig.heightMultiplier * 5,
                                         decoration: const BoxDecoration(
                                             color: AppTheme.appPrimaryColor,
                                             shape: BoxShape.circle),

@@ -42,13 +42,14 @@ class _SettingState extends State<Setting> {
                 children: [
                   Text(""),
                   Text(
-                    "Setting",
+                    "SETTINGS",
                     style: TextStyle(
-                        fontSize: SizeConfig.textMultiplier * 2.5,
+                        fontSize: SizeConfig.textMultiplier * 2,
                         color: Colors.white),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 15, top: 10, bottom: 10),
                     child: SvgPicture.asset('lib/assets/Logout.svg'),
                   )
                 ],
@@ -76,10 +77,10 @@ class _SettingState extends State<Setting> {
                                     Text(
                                       "Show New Notification",
                                       style: TextStyle(
+                                          fontWeight: FontWeight.bold,
                                           fontSize:
-                                              SizeConfig.textMultiplier * 2,
-                                          color:
-                                              AppTheme.settingHeadingTextColor),
+                                              SizeConfig.textMultiplier * 1.5,
+                                          color: Colors.black),
                                     ),
                                     Text(
                                       "Lorem Ipsum is simply dummy text of the printing",
@@ -87,15 +88,15 @@ class _SettingState extends State<Setting> {
                                         color:
                                             AppTheme.settingSubHeadingTextColor,
                                         fontSize:
-                                            SizeConfig.textMultiplier * 1.5,
+                                            SizeConfig.textMultiplier * 1.2,
                                       ),
                                     ),
                                   ],
                                 ),
                                 FlutterSwitch(
                                   activeColor: AppTheme.appPrimaryColor,
-                                  height: SizeConfig.heightMultiplier * 4,
-                                  width: SizeConfig.widthMultiplier * 15,
+                                  height: SizeConfig.heightMultiplier * 3.5,
+                                  width: SizeConfig.widthMultiplier * 13,
                                   value: firstToggle,
                                   onToggle: (bool value) {
                                     setState(() {
@@ -121,10 +122,10 @@ class _SettingState extends State<Setting> {
                                     Text(
                                       "High-urgency Notification",
                                       style: TextStyle(
+                                          fontWeight: FontWeight.bold,
                                           fontSize:
-                                              SizeConfig.textMultiplier * 2,
-                                          color:
-                                              AppTheme.settingHeadingTextColor),
+                                              SizeConfig.textMultiplier * 1.5,
+                                          color: Colors.black),
                                     ),
                                     Text(
                                       "Lorem Ipsum is simply dummy text of the printing",
@@ -132,15 +133,15 @@ class _SettingState extends State<Setting> {
                                         color:
                                             AppTheme.settingSubHeadingTextColor,
                                         fontSize:
-                                            SizeConfig.textMultiplier * 1.5,
+                                            SizeConfig.textMultiplier * 1.2,
                                       ),
                                     ),
                                   ],
                                 ),
                                 FlutterSwitch(
                                   activeColor: AppTheme.appPrimaryColor,
-                                  height: SizeConfig.heightMultiplier * 4,
-                                  width: SizeConfig.widthMultiplier * 15,
+                                  height: SizeConfig.heightMultiplier * 3.5,
+                                  width: SizeConfig.widthMultiplier * 13,
                                   value: secondToggle,
                                   onToggle: (bool value) {
                                     setState(() {
@@ -166,10 +167,10 @@ class _SettingState extends State<Setting> {
                                     Text(
                                       "Low-urgency Notification",
                                       style: TextStyle(
+                                          fontWeight: FontWeight.bold,
                                           fontSize:
-                                              SizeConfig.textMultiplier * 2,
-                                          color:
-                                              AppTheme.settingHeadingTextColor),
+                                              SizeConfig.textMultiplier * 1.5,
+                                          color: Colors.black),
                                     ),
                                     Text(
                                       "Lorem Ipsum is simply dummy text of the printing",
@@ -177,15 +178,15 @@ class _SettingState extends State<Setting> {
                                         color:
                                             AppTheme.settingSubHeadingTextColor,
                                         fontSize:
-                                            SizeConfig.textMultiplier * 1.5,
+                                            SizeConfig.textMultiplier * 1.2,
                                       ),
                                     ),
                                   ],
                                 ),
                                 FlutterSwitch(
                                   activeColor: AppTheme.appPrimaryColor,
-                                  height: SizeConfig.heightMultiplier * 4,
-                                  width: SizeConfig.widthMultiplier * 15,
+                                  height: SizeConfig.heightMultiplier * 3.5,
+                                  width: SizeConfig.widthMultiplier * 13,
                                   value: thirdToggle,
                                   onToggle: (bool value) {
                                     setState(() {
@@ -211,10 +212,10 @@ class _SettingState extends State<Setting> {
                                     Text(
                                       "All Other Notification",
                                       style: TextStyle(
+                                          fontWeight: FontWeight.bold,
                                           fontSize:
-                                              SizeConfig.textMultiplier * 2,
-                                          color:
-                                              AppTheme.settingHeadingTextColor),
+                                              SizeConfig.textMultiplier * 1.5,
+                                          color: Colors.black),
                                     ),
                                     Text(
                                       "Lorem Ipsum is simply dummy text of the printing",
@@ -222,15 +223,15 @@ class _SettingState extends State<Setting> {
                                         color:
                                             AppTheme.settingSubHeadingTextColor,
                                         fontSize:
-                                            SizeConfig.textMultiplier * 1.5,
+                                            SizeConfig.textMultiplier * 1.2,
                                       ),
                                     ),
                                   ],
                                 ),
                                 FlutterSwitch(
                                   activeColor: AppTheme.appPrimaryColor,
-                                  height: SizeConfig.heightMultiplier * 4,
-                                  width: SizeConfig.widthMultiplier * 15,
+                                  height: SizeConfig.heightMultiplier * 3.5,
+                                  width: SizeConfig.widthMultiplier * 13,
                                   value: fourthToggle,
                                   onToggle: (bool value) {
                                     setState(() {

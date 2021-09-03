@@ -16,7 +16,7 @@ class AppTheme {
   static const Color unSelectedTabBackgroundColor = Color(0xFFFFFFFC);
   static const Color subTitleTextColor = Color(0xFF9F988F);
   static const Color blackColor = Color(0xFF000000);
-
+  static const Color hintColor = Color(0xFF000080);
   //setting screen text colors
   static const Color settingHeadingTextColor = Color(0xFF000000);
   static const Color settingSubHeadingTextColor = Colors.grey;

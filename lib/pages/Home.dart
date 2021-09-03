@@ -25,6 +25,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
         resizeToAvoidBottomInset: false,
         bottomNavigationBar: BottomNavigationBar(
+          selectedFontSize: SizeConfig.textMultiplier * 1.2,
           currentIndex: _currentIndex,
           items: [
             BottomNavigationBarItem(
@@ -34,13 +35,13 @@ class _HomeState extends State<Home> {
                         padding: const EdgeInsets.all(2),
                         child: Container(
                           height: SizeConfig.heightMultiplier * 5,
-                          width: SizeConfig.widthMultiplier * 10,
+                          width: SizeConfig.heightMultiplier * 5,
                           decoration: const BoxDecoration(
                               color: Colors.white,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10.0))),
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(6),
                             child: SvgPicture.asset(
                               'lib/assets/Home-Red.svg',
                               height: SizeConfig.heightMultiplier * 2.5,
@@ -60,13 +61,13 @@ class _HomeState extends State<Home> {
                         padding: const EdgeInsets.all(2),
                         child: Container(
                           height: SizeConfig.heightMultiplier * 5,
-                          width: SizeConfig.widthMultiplier * 10,
+                          width: SizeConfig.heightMultiplier * 5,
                           decoration: const BoxDecoration(
                               color: Colors.white,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10.0))),
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(6),
                             child: SvgPicture.asset(
                               'lib/assets/Track-Red.svg',
                               height: SizeConfig.heightMultiplier * 2.5,
@@ -86,13 +87,13 @@ class _HomeState extends State<Home> {
                         padding: const EdgeInsets.all(2),
                         child: Container(
                           height: SizeConfig.heightMultiplier * 5,
-                          width: SizeConfig.widthMultiplier * 10,
+                          width: SizeConfig.heightMultiplier * 5,
                           decoration: const BoxDecoration(
                               color: Colors.white,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10.0))),
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(6),
                             child: SvgPicture.asset(
                               'lib/assets/Notification-Red.svg',
                               height: SizeConfig.heightMultiplier * 2.5,
@@ -112,13 +113,13 @@ class _HomeState extends State<Home> {
                         padding: const EdgeInsets.all(2),
                         child: Container(
                           height: SizeConfig.heightMultiplier * 5,
-                          width: SizeConfig.widthMultiplier * 10,
+                          width: SizeConfig.heightMultiplier * 5,
                           decoration: const BoxDecoration(
                               color: Colors.white,
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10.0))),
                           child: Padding(
-                            padding: const EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(6),
                             child: SvgPicture.asset(
                               'lib/assets/Settings-Red.svg',
                               height: SizeConfig.heightMultiplier * 2.5,

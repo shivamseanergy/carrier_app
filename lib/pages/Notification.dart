@@ -60,13 +60,14 @@ class _NotificationsState extends State<Notifications> {
                 children: [
                   Text(""),
                   Text(
-                    "NOTIFICATION",
+                    "NOTIFICATIONS",
                     style: TextStyle(
-                        fontSize: SizeConfig.textMultiplier * 2.5,
+                        fontSize: SizeConfig.textMultiplier * 2,
                         color: Colors.white),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 15, top: 10, bottom: 10),
                     child: SvgPicture.asset('lib/assets/Logout.svg'),
                   )
                 ],
@@ -76,7 +77,6 @@ class _NotificationsState extends State<Notifications> {
                 itemCount: loadBoardList.length,
                 itemBuilder: (context, index) {
                   return Card(
-                    elevation: 5.0,
                     margin: const EdgeInsets.symmetric(
                         horizontal: 10.0, vertical: 6.0),
                     child: InkWell(
@@ -105,14 +105,14 @@ class _NotificationsState extends State<Notifications> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
-                                  height: SizeConfig.heightMultiplier * 8,
-                                  width: SizeConfig.heightMultiplier * 8,
+                                  height: SizeConfig.heightMultiplier * 6,
+                                  width: SizeConfig.heightMultiplier * 6,
                                   decoration: const BoxDecoration(
                                       color: AppTheme.appPrimaryColor,
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(10.0))),
                                   child: Padding(
-                                    padding: const EdgeInsets.all(12),
+                                    padding: const EdgeInsets.all(8.0),
                                     child: SvgPicture.asset(
                                         'lib/assets/Shipping.svg'),
                                   ),
@@ -129,7 +129,6 @@ class _NotificationsState extends State<Notifications> {
                                           loadBoardList[index].ordrId!,
                                           style: TextStyle(
                                               color: Color(0xFFA7A7A7),
-                                              fontWeight: FontWeight.w600,
                                               fontSize:
                                                   SizeConfig.textMultiplier *
                                                       2),
@@ -145,7 +144,7 @@ class _NotificationsState extends State<Notifications> {
                                                   color: Colors.grey[900],
                                                   fontSize: SizeConfig
                                                           .textMultiplier *
-                                                      1.8),
+                                                      1.6),
                                             ),
                                           ),
                                           Text(
@@ -154,7 +153,7 @@ class _NotificationsState extends State<Notifications> {
                                               color: Colors.red,
                                               fontSize:
                                                   SizeConfig.textMultiplier *
-                                                      1.8,
+                                                      1.6,
                                             ),
                                           ),
                                           Padding(
@@ -167,7 +166,7 @@ class _NotificationsState extends State<Notifications> {
                                                   color: Colors.grey[900],
                                                   fontSize: SizeConfig
                                                           .textMultiplier *
-                                                      1.8),
+                                                      1.6),
                                             ),
                                           ),
                                         ],
@@ -177,10 +176,9 @@ class _NotificationsState extends State<Notifications> {
                                         child: Text(
                                           loadBoardList[index].equipment!,
                                           style: TextStyle(
-                                              color: Colors.grey[900],
                                               fontSize:
                                                   SizeConfig.textMultiplier *
-                                                      1.8),
+                                                      1.6),
                                         ),
                                       ),
                                       Padding(
@@ -191,7 +189,7 @@ class _NotificationsState extends State<Notifications> {
                                               color: Colors.grey[900],
                                               fontSize:
                                                   SizeConfig.textMultiplier *
-                                                      1.8),
+                                                      1.6),
                                         ),
                                       ),
                                     ],

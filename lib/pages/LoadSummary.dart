@@ -29,32 +29,36 @@ class _LoadSummaryState extends State<LoadSummary> {
                 color: AppTheme.appPrimaryColor,
               ),
               Column(children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: SvgPicture.asset('lib/assets/BackButton.svg'),
-                    ),
-                    Text(
-                      "LOAD SUMMARY",
-                      style: TextStyle(
-                          fontSize: SizeConfig.textMultiplier * 2.5,
-                          color: Colors.white),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: SvgPicture.asset('lib/assets/Logout.svg'),
-                    )
-                  ],
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      IconButton(
+                        icon: SvgPicture.asset('lib/assets/BackButton.svg'),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                      ),
+                      Text(
+                        "LOAD SUMMARY",
+                        style: TextStyle(
+                            fontSize: SizeConfig.textMultiplier * 2,
+                            color: Colors.white),
+                      ),
+                      SvgPicture.asset('lib/assets/Logout.svg'),
+                    ],
+                  ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.only(
+                      top: 10, left: 10, right: 10, bottom: 30),
                   child: Card(
                       elevation: 5,
                       margin: EdgeInsets.only(top: 5),
                       child: Padding(
-                        padding: const EdgeInsets.all(15),
+                        padding: const EdgeInsets.only(
+                            left: 15, right: 15, top: 15, bottom: 30),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -70,7 +74,7 @@ class _LoadSummaryState extends State<LoadSummary> {
                                       child: Text(
                                         "546897512325",
                                         style: TextStyle(
-                                            color: Colors.grey[900],
+                                            color: Color(0xFFA7A7A7),
                                             fontSize:
                                                 SizeConfig.textMultiplier *
                                                     1.8),
@@ -88,7 +92,7 @@ class _LoadSummaryState extends State<LoadSummary> {
                                                   color: Colors.grey[900],
                                                   fontSize: SizeConfig
                                                           .textMultiplier *
-                                                      1.8),
+                                                      1.6),
                                             ),
                                           ),
                                           Padding(
@@ -99,7 +103,7 @@ class _LoadSummaryState extends State<LoadSummary> {
                                                 color: Colors.red,
                                                 fontSize:
                                                     SizeConfig.textMultiplier *
-                                                        1.8,
+                                                        1.6,
                                               ),
                                             ),
                                           ),
@@ -111,7 +115,7 @@ class _LoadSummaryState extends State<LoadSummary> {
                                                   color: Colors.grey[900],
                                                   fontSize: SizeConfig
                                                           .textMultiplier *
-                                                      1.8),
+                                                      1.6),
                                             ),
                                           ),
                                         ],
@@ -125,7 +129,7 @@ class _LoadSummaryState extends State<LoadSummary> {
                                             color: Colors.grey[900],
                                             fontSize:
                                                 SizeConfig.textMultiplier *
-                                                    1.8),
+                                                    1.6),
                                       ),
                                     ),
                                     Padding(
@@ -136,7 +140,7 @@ class _LoadSummaryState extends State<LoadSummary> {
                                             color: Colors.grey[900],
                                             fontSize:
                                                 SizeConfig.textMultiplier *
-                                                    1.8),
+                                                    1.6),
                                       ),
                                     ),
                                     Padding(
@@ -147,7 +151,7 @@ class _LoadSummaryState extends State<LoadSummary> {
                                             color: Colors.grey[900],
                                             fontSize:
                                                 SizeConfig.textMultiplier *
-                                                    1.8),
+                                                    1.6),
                                       ),
                                     ),
                                     Padding(
@@ -158,7 +162,7 @@ class _LoadSummaryState extends State<LoadSummary> {
                                             color: Colors.grey[900],
                                             fontSize:
                                                 SizeConfig.textMultiplier *
-                                                    1.8),
+                                                    1.6),
                                       ),
                                     ),
                                     Divider(
@@ -167,14 +171,14 @@ class _LoadSummaryState extends State<LoadSummary> {
                                   ],
                                 ),
                                 Container(
-                                  height: SizeConfig.heightMultiplier * 8,
-                                  width: SizeConfig.heightMultiplier * 8,
+                                  height: SizeConfig.heightMultiplier * 6,
+                                  width: SizeConfig.heightMultiplier * 6,
                                   decoration: const BoxDecoration(
                                       color: AppTheme.appPrimaryColor,
                                       borderRadius: BorderRadius.all(
                                           Radius.circular(10.0))),
                                   child: Padding(
-                                    padding: const EdgeInsets.all(12),
+                                    padding: const EdgeInsets.all(10),
                                     child: SvgPicture.asset(
                                         'lib/assets/Shipping.svg'),
                                   ),
@@ -195,6 +199,9 @@ class _LoadSummaryState extends State<LoadSummary> {
                                     color: AppTheme.blackColor),
                               ),
                             ),
+                            SizedBox(
+                              height: 10,
+                            ),
                             IgnorePointer(
                               child: Row(
                                 children: <Widget>[
@@ -202,12 +209,16 @@ class _LoadSummaryState extends State<LoadSummary> {
                                     child: ButtonTheme(
                                       alignedDropdown: true,
                                       child: SizedBox(
-                                        height:
-                                            SizeConfig.heightMultiplier * 10,
+                                        height: SizeConfig.heightMultiplier * 8,
                                         child: DropdownButtonFormField<String>(
                                           decoration: InputDecoration(
                                             fillColor: Color(0xFFF8F8F8),
                                             hintText: 'Pick Up / Loaded',
+                                            hintStyle: TextStyle(
+                                                fontSize:
+                                                    SizeConfig.textMultiplier *
+                                                        1.8,
+                                                color: Colors.grey[500]),
                                             filled: true,
                                             contentPadding: EdgeInsets.all(
                                                 SizeConfig.textMultiplier *
@@ -219,6 +230,13 @@ class _LoadSummaryState extends State<LoadSummary> {
                                                               .widthMultiplier *
                                                           2),
                                             ),
+                                            enabledBorder: OutlineInputBorder(
+                                                borderRadius: BorderRadius
+                                                    .circular(SizeConfig
+                                                            .widthMultiplier *
+                                                        2),
+                                                borderSide: BorderSide(
+                                                    color: Color(0xC1C180))),
                                             focusedBorder: OutlineInputBorder(
                                               borderRadius: BorderRadius.all(
                                                   Radius.circular(SizeConfig
@@ -260,41 +278,51 @@ class _LoadSummaryState extends State<LoadSummary> {
                                 ],
                               ),
                             ),
+                            SizedBox(
+                              height: 10,
+                            ),
                             Center(
-                              child: Padding(
-                                padding: const EdgeInsets.only(top: 30),
-                                child: DottedBorder(
-                                    dashPattern: [6, 3],
-                                    color: Color(0xFFD8D8D8),
-                                    strokeWidth: 2,
-                                    child: Container(
-                                      color: Color(0xFFF8F8F8),
-                                      height: SizeConfig.heightMultiplier * 30,
-                                      width: double.infinity,
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          SvgPicture.asset(
-                                              'lib/assets/Upload.svg'),
-                                          Text('Document Upload'),
-                                          FlatButton(
-                                            // splashColor: Colors.red,
-                                            // textColor: Colors.white,
-                                            color: AppTheme.blackColor,
-                                            child: const Text(
-                                              'Upload',
-                                              style: TextStyle(
-                                                  color: Colors.white),
-                                            ),
-                                            onPressed: () {
-                                              setState(() {});
-                                            },
+                              child: DottedBorder(
+                                  dashPattern: [6, 3],
+                                  color: Color(0xFFD8D8D8),
+                                  strokeWidth: 2,
+                                  child: Container(
+                                    color: Color(0xFFF8F8F8),
+                                    height: SizeConfig.heightMultiplier * 30,
+                                    width: double.infinity,
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        SvgPicture.asset(
+                                            'lib/assets/Upload.svg'),
+                                        Text(
+                                          'Document Upload',
+                                          style: TextStyle(
+                                            fontSize:
+                                                SizeConfig.textMultiplier * 1.8,
+                                            color: Colors.grey[500],
                                           ),
-                                        ],
-                                      ),
-                                    )),
-                              ),
+                                        ),
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        FlatButton(
+                                          // splashColor: Colors.red,
+                                          // textColor: Colors.white,
+                                          color: AppTheme.blackColor,
+                                          child: const Text(
+                                            'Upload',
+                                            style:
+                                                TextStyle(color: Colors.white),
+                                          ),
+                                          onPressed: () {
+                                            setState(() {});
+                                          },
+                                        ),
+                                      ],
+                                    ),
+                                  )),
                             ),
                           ],
                         ),

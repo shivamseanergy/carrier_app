@@ -85,6 +85,13 @@ flutter:
     - lib/assets/Notification-Red.svg
     - lib/assets/Settings-Red.svg
     - lib/assets/Track-Red.svg
+    - lib/assets/User-Dark.svg
+    - lib/assets/Password-Dark.svg
+    - lib/assets/Password.svg
+    - lib/assets/User.svg
+
+
+
 
  
 
