@@ -48,14 +48,19 @@ class _SettingState extends State<Setting> {
                         color: Colors.white),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(
-                        left: 10, right: 15, top: 10, bottom: 10),
-                    child: SvgPicture.asset('lib/assets/Logout.svg'),
+                    padding: EdgeInsets.all(SizeConfig.heightMultiplier * 1.5),
+                    child: SvgPicture.asset('lib/assets/Logout.svg',
+                        height: SizeConfig.imageSizeMultiplier * 5,
+                        width: SizeConfig.imageSizeMultiplier * 5),
                   )
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.only(
+                    left: SizeConfig.heightMultiplier * 1.5,
+                    right: SizeConfig.heightMultiplier * 1.5,
+                    bottom: SizeConfig.heightMultiplier * 1.5,
+                    top: SizeConfig.heightMultiplier * 2),
                 child: SizedBox(
                   width: double.infinity,
                   child: Card(

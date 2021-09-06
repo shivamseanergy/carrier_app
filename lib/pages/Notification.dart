@@ -66,9 +66,10 @@ class _NotificationsState extends State<Notifications> {
                         color: Colors.white),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(
-                        left: 10, right: 15, top: 10, bottom: 10),
-                    child: SvgPicture.asset('lib/assets/Logout.svg'),
+                    padding: EdgeInsets.all(SizeConfig.heightMultiplier * 1.5),
+                    child: SvgPicture.asset('lib/assets/Logout.svg',
+                        height: SizeConfig.imageSizeMultiplier * 5,
+                        width: SizeConfig.imageSizeMultiplier * 5),
                   )
                 ],
               ),
