@@ -23,14 +23,16 @@ class _LoadSummaryState extends State<LoadSummary> {
             resizeToAvoidBottomInset: false,
             body: Stack(children: [
               Container(
-                margin: EdgeInsets.only(bottom: 25),
+                margin:
+                    EdgeInsets.only(bottom: SizeConfig.heightMultiplier * 5),
                 height: SizeConfig.heightMultiplier * 12,
                 width: double.infinity,
                 color: AppTheme.appPrimaryColor,
               ),
               Column(children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: SizeConfig.heightMultiplier * 2),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -46,19 +48,30 @@ class _LoadSummaryState extends State<LoadSummary> {
                             fontSize: SizeConfig.textMultiplier * 2,
                             color: Colors.white),
                       ),
-                      SvgPicture.asset('lib/assets/Logout.svg'),
+                      Padding(
+                        padding:
+                            EdgeInsets.all(SizeConfig.heightMultiplier * 1.5),
+                        child: SvgPicture.asset('lib/assets/Logout.svg',
+                            height: SizeConfig.imageSizeMultiplier * 5,
+                            width: SizeConfig.imageSizeMultiplier * 5),
+                      )
                     ],
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(
-                      top: 10, left: 10, right: 10, bottom: 30),
+                  padding: EdgeInsets.only(
+                      left: SizeConfig.heightMultiplier * 1.5,
+                      right: SizeConfig.heightMultiplier * 1.5,
+                      bottom: SizeConfig.heightMultiplier * 1.5,
+                      top: SizeConfig.heightMultiplier * 2),
                   child: Card(
                       elevation: 5,
-                      margin: EdgeInsets.only(top: 5),
                       child: Padding(
-                        padding: const EdgeInsets.only(
-                            left: 15, right: 15, top: 15, bottom: 30),
+                        padding: EdgeInsets.only(
+                            left: SizeConfig.heightMultiplier * 2,
+                            right: SizeConfig.heightMultiplier * 2,
+                            top: SizeConfig.heightMultiplier * 2,
+                            bottom: SizeConfig.heightMultiplier * 4),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -70,7 +83,8 @@ class _LoadSummaryState extends State<LoadSummary> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsets.all(2),
+                                      padding: EdgeInsets.all(
+                                          SizeConfig.heightMultiplier * 0.4),
                                       child: Text(
                                         "546897512325",
                                         style: TextStyle(
@@ -81,11 +95,14 @@ class _LoadSummaryState extends State<LoadSummary> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.all(2),
+                                      padding: EdgeInsets.all(
+                                          SizeConfig.heightMultiplier * 0.2),
                                       child: Row(
                                         children: [
                                           Padding(
-                                            padding: const EdgeInsets.all(2),
+                                            padding: EdgeInsets.all(
+                                                SizeConfig.heightMultiplier *
+                                                    0.2),
                                             child: Text(
                                               "PEARL",
                                               style: TextStyle(
@@ -96,7 +113,9 @@ class _LoadSummaryState extends State<LoadSummary> {
                                             ),
                                           ),
                                           Padding(
-                                            padding: const EdgeInsets.all(2),
+                                            padding: EdgeInsets.all(
+                                                SizeConfig.heightMultiplier *
+                                                    0.2),
                                             child: Text(
                                               "TO",
                                               style: TextStyle(
@@ -108,7 +127,9 @@ class _LoadSummaryState extends State<LoadSummary> {
                                             ),
                                           ),
                                           Padding(
-                                            padding: const EdgeInsets.all(2),
+                                            padding: EdgeInsets.all(
+                                                SizeConfig.heightMultiplier *
+                                                    0.2),
                                             child: Text(
                                               "MANCHESTER",
                                               style: TextStyle(
@@ -122,7 +143,8 @@ class _LoadSummaryState extends State<LoadSummary> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.all(2),
+                                      padding: EdgeInsets.all(
+                                          SizeConfig.heightMultiplier * 0.2),
                                       child: Text(
                                         "Equipment #: 9574215",
                                         style: TextStyle(
@@ -133,7 +155,8 @@ class _LoadSummaryState extends State<LoadSummary> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.all(2),
+                                      padding: EdgeInsets.all(
+                                          SizeConfig.heightMultiplier * 0.2),
                                       child: Text(
                                         "Office #: +1 365 25458",
                                         style: TextStyle(
@@ -144,7 +167,8 @@ class _LoadSummaryState extends State<LoadSummary> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.all(2),
+                                      padding: EdgeInsets.all(
+                                          SizeConfig.heightMultiplier * 0.2),
                                       child: Text(
                                         "Pickup Date: 25-July-2021",
                                         style: TextStyle(
@@ -155,7 +179,8 @@ class _LoadSummaryState extends State<LoadSummary> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.all(2),
+                                      padding: EdgeInsets.all(
+                                          SizeConfig.heightMultiplier * 0.2),
                                       child: Text(
                                         "Delivery Date: 30-July-2021",
                                         style: TextStyle(
